@@ -15,6 +15,7 @@ final class PreviewViewModel: ObservableObject {
     @Published var image: UIImage?
     @Published var title: String?
     @Published var url: String?
+    @Published var icon: UIImage?
     
     let previewURL: URL?
     
@@ -31,7 +32,9 @@ final class PreviewViewModel: ObservableObject {
         Task {
             let metadata = try await provider.startFetchingMetadata(for: previewURL)
             
+            
             image = try await convertToImage(metadata.imageProvider)
+            icon = try await convertToImage(metadata.iconProvider)
             title = metadata.title
             
             url = metadata.url?.host()
@@ -73,9 +76,10 @@ final class PreviewViewModel: ObservableObject {
 struct URLPreviewView: View {
     
     let links: [StringLink] = [
-        StringLink(id: UUID(), string: "url1"),
-        StringLink(id: UUID(), string: "url2"),
-        StringLink(id: UUID(), string: "url3")
+        StringLink(id: UUID(), string: "https://www.apple.com"),
+        StringLink(id: UUID(), string: "https://naver.com"),
+        StringLink(id: UUID(), string: "https://genshin.gamedot.org/?mid=genshinmaps"),
+        StringLink(id: UUID(), string: "https://eatbuy.co.kr/MagazineDetail?id=138")
     ]
     
     var body: some View {
@@ -86,7 +90,7 @@ struct URLPreviewView: View {
                     URLPreviewRow(
                         viewModel: PreviewViewModel(l.string))
                 }
-            }.environment(\.defaultMinListRowHeight, 50)
+            }
         }
     }
 }
@@ -96,9 +100,19 @@ struct URLPreviewRow: View {
     @ObservedObject var viewModel: PreviewViewModel
     
     var body: some View {
+        
         HStack(spacing: 15) {
             if let image = viewModel.image {
                 Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: 107, maxHeight: 107)
+                    .clipped()
+                    .cornerRadius(16)
+            }
+            
+            if let icon = viewModel.icon {
+                Image(uiImage: icon)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: 107, maxHeight: 107)
@@ -121,13 +135,15 @@ struct URLPreviewRow: View {
                         .multilineTextAlignment(.leading)
                 }
             })
-            .padding(.top, 16)
-            .padding(.bottom, 9)
-            .padding(.trailing, 40)
+            .padding(.vertical, 10)
+            .padding(.trailing, 20)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(maxWidth: .infinity, maxHeight: 100)
+        .frame(maxWidth: .infinity)
+        .frame(height: 100, alignment: .leading)
     }
 }
+
 
 struct URLPreviewView_Previews: PreviewProvider {
     static var previews: some View {
