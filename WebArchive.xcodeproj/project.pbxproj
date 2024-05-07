@@ -108,13 +108,10 @@
 		F29A7D092BE76B130053745D /* WebArchive */ = {
 			isa = PBXGroup;
 			children = (
+				F29A7D492BEA5F720053745D /* Example */,
 				F29A7D442BE8E4270053745D /* Model */,
 				F29A7D0A2BE76B130053745D /* WebArchiveApp.swift */,
 				F29A7D452BE8E8FD0053745D /* URLPreviewView.swift */,
-				F29A7D392BE76D800053745D /* TestView.swift */,
-				F29A7D3B2BE789E30053745D /* TestController.swift */,
-				F29A7D3D2BE8C7020053745D /* LinkListView.swift */,
-				F29A7D0C2BE76B130053745D /* ContentView.swift */,
 				F29A7D0E2BE76B180053745D /* Assets.xcassets */,
 				F29A7D132BE76B180053745D /* Persistence.swift */,
 				F29A7D152BE76B180053745D /* WebArchive.xcdatamodeld */,
@@ -154,6 +151,17 @@
 				F29A7D472BE8F89D0053745D /* StringLink.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F29A7D492BEA5F720053745D /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				F29A7D392BE76D800053745D /* TestView.swift */,
+				F29A7D3D2BE8C7020053745D /* LinkListView.swift */,
+				F29A7D3B2BE789E30053745D /* TestController.swift */,
+				F29A7D0C2BE76B130053745D /* ContentView.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

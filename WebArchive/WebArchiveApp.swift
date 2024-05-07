@@ -13,10 +13,6 @@ struct WebArchiveApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            TestView()
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-//            LinkListView() // 애플 개발자 포럼 코드 참고
             URLPreviewView() // LP 링크 프리뷰 커스텀한 뷰
         }
     }
