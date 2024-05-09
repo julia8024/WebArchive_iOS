@@ -21,6 +21,7 @@
 		F29A7D3E2BE8C7020053745D /* LinkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D3D2BE8C7020053745D /* LinkListView.swift */; };
 		F29A7D462BE8E8FD0053745D /* URLPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D452BE8E8FD0053745D /* URLPreviewView.swift */; };
 		F29A7D482BE8F89D0053745D /* StringLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D472BE8F89D0053745D /* StringLink.swift */; };
+		F29A7D532BED37E40053745D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D522BED37E40053745D /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		F29A7D3D2BE8C7020053745D /* LinkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkListView.swift; sourceTree = "<group>"; };
 		F29A7D452BE8E8FD0053745D /* URLPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPreviewView.swift; sourceTree = "<group>"; };
 		F29A7D472BE8F89D0053745D /* StringLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLink.swift; sourceTree = "<group>"; };
+		F29A7D522BED37E40053745D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				F29A7D442BE8E4270053745D /* Model */,
 				F29A7D0A2BE76B130053745D /* WebArchiveApp.swift */,
 				F29A7D452BE8E8FD0053745D /* URLPreviewView.swift */,
+				F29A7D522BED37E40053745D /* DataController.swift */,
 				F29A7D0E2BE76B180053745D /* Assets.xcassets */,
 				F29A7D132BE76B180053745D /* Persistence.swift */,
 				F29A7D152BE76B180053745D /* WebArchive.xcdatamodeld */,
@@ -299,6 +302,7 @@
 				F29A7D0D2BE76B130053745D /* ContentView.swift in Sources */,
 				F29A7D3C2BE789E30053745D /* TestController.swift in Sources */,
 				F29A7D0B2BE76B130053745D /* WebArchiveApp.swift in Sources */,
+				F29A7D532BED37E40053745D /* DataController.swift in Sources */,
 				F29A7D3E2BE8C7020053745D /* LinkListView.swift in Sources */,
 				F29A7D462BE8E8FD0053745D /* URLPreviewView.swift in Sources */,
 				F29A7D172BE76B180053745D /* WebArchive.xcdatamodeld in Sources */,

@@ -75,6 +75,9 @@ final class PreviewViewModel: ObservableObject {
 
 struct URLPreviewView: View {
     
+    @Environment(\.managedObjectContext) var manageObjContext
+    @FetchRequest(sortDescriptors: []) var link: FetchedResults<Link>
+    
     let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: 4)
     
     let links: [StringLink] = [
@@ -88,6 +91,10 @@ struct URLPreviewView: View {
         StringLink(id: UUID(), string: "https://solved.ac/")
     ]
     
+    @State private var inputTitle: String = ""
+    @State private var inputURL: String = ""
+    @State private var selectedSide: SegmentToggleIcons = .icon
+    
     var body: some View {
         // 리스트뷰
 //        VStack {
@@ -98,19 +105,64 @@ struct URLPreviewView: View {
 //                }
 //            }
 //        }
-        
-        // 그리드뷰
-        ScrollView {
-            LazyVGrid(columns: columns) {
-                ForEach(links, id: \.self) { l in
-                    URLPreviewGridRow(viewModel: PreviewViewModel(l.string))
+        VStack {
+            TextField(inputTitle.isEmpty ? "Title 입력" : inputTitle, text: $inputTitle)
+                .padding(10)
+                .border(.gray, width: 1)
+                .padding(30)
+                .textInputAutocapitalization(.never)
+            
+            TextField(inputURL.isEmpty ? "URL 입력" : inputURL, text: $inputURL)
+                .padding(10)
+                .border(.gray, width: 1)
+                .padding(30)
+                .textInputAutocapitalization(.never)
+            
+            HStack {
+                // segmented control
+                Picker("Choose a Side", selection: $selectedSide) {
+                    ForEach(SegmentToggleIcons.allCases, id: \.self) {
+                        Image(systemName: String($0.rawValue))
+                            .environment(\.symbolVariants, .none)
+                            .imageScale(.medium)
+                            .foregroundColor(Color(.blue))
+                    }
                 }
-                .padding(.bottom, 30)
+                .pickerStyle(SegmentedPickerStyle())
             }
-            .padding(30)
+            .padding(.horizontal, 30)
+                
+        
+        Button("링크 추가하기", action: {
+            DataController()
+                .addLink(
+                    title: inputTitle,
+                    url: inputURL,
+                    url_type: selectedSide == .icon ? "icon" : "content",
+                    context: manageObjContext)
+        })
+            
+            // 그리드뷰
+            ScrollView {
+                if (link.count > 0) {
+                    LazyVGrid(columns: columns) {
+                        ForEach(link) { l in
+                            URLPreviewGridRow(viewModel: PreviewViewModel(l.url ?? ""))
+                        }
+                        .padding(.bottom, 30)
+                    }
+                    .padding(30)
+                }
+                
+            }
         }
                          
     }
+}
+
+enum SegmentToggleIcons: String, CaseIterable {
+    case icon = "app.badge.fill"
+    case content = "link"
 }
 
 struct URLPreviewGridRow: View {
