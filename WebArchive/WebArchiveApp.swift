@@ -16,10 +16,12 @@ struct WebArchiveApp: App {
 
     var body: some Scene {
         WindowGroup {
-            URLPreviewView() // LP 링크 프리뷰 커스텀한 뷰
+//            URLPreviewView() // LP 링크 프리뷰 커스텀한 뷰
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//                .environment(\.managedObjectContext, dataController.container.viewContext)
+            ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
-
+            
         }
     }
 }
