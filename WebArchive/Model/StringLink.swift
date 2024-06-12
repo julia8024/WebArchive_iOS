@@ -9,5 +9,5 @@ import Foundation
 
 struct StringLink: Identifiable, Hashable {
     var id = UUID()
-    var string: String
+    var url: String
 }

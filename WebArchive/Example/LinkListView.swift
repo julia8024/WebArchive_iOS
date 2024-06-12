@@ -13,16 +13,16 @@ struct LinkListView: View {
     @State var redrawPreview = false
     
     let links: [StringLink] = [
-        StringLink(id: UUID(), string: "url1"),
-        StringLink(id: UUID(), string: "url2"),
-        StringLink(id: UUID(), string: "url3")
+        StringLink(id: UUID(), url: "url1"),
+        StringLink(id: UUID(), url: "url2"),
+        StringLink(id: UUID(), url: "url3")
     ]
     
     var body: some View {
         List(links) { l in
             VStack {
                 
-                LinkRow(previewURL: URL(string: l.string)!, redraw: self.$redrawPreview)
+                LinkRow(previewURL: URL(string: l.url)!, redraw: self.$redrawPreview)
             }
         }.environment(\.defaultMinListRowHeight, 50)
     }

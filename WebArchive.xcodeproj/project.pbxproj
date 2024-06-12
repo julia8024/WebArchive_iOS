@@ -29,6 +29,12 @@
 		F29A7D612BFFA34E0053745D /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D602BFFA34E0053745D /* PieceView.swift */; };
 		F29A7D632BFFA35B0053745D /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D622BFFA35B0053745D /* BoxView.swift */; };
 		F29A7D652BFFA36C0053745D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D642BFFA36C0053745D /* ProfileView.swift */; };
+		F29A7D672C0F54450053745D /* PieceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D662C0F54450053745D /* PieceItem.swift */; };
+		F29A7D692C0F61B20053745D /* PieceItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D682C0F61B20053745D /* PieceItemList.swift */; };
+		F29A7D6B2C0F649F0053745D /* AddableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D6A2C0F649F0053745D /* AddableItem.swift */; };
+		F29A7D6D2C0F6BF70053745D /* EditPieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D6C2C0F6BF70053745D /* EditPieceView.swift */; };
+		F29A7D6F2C0F6C2D0053745D /* UnderlineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D6E2C0F6C2D0053745D /* UnderlineTextFieldView.swift */; };
+		F29A7D712C0F785C0053745D /* TitleTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D702C0F785C0053745D /* TitleTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,12 @@
 		F29A7D602BFFA34E0053745D /* PieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
 		F29A7D622BFFA35B0053745D /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		F29A7D642BFFA36C0053745D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F29A7D662C0F54450053745D /* PieceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceItem.swift; sourceTree = "<group>"; };
+		F29A7D682C0F61B20053745D /* PieceItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceItemList.swift; sourceTree = "<group>"; };
+		F29A7D6A2C0F649F0053745D /* AddableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableItem.swift; sourceTree = "<group>"; };
+		F29A7D6C2C0F6BF70053745D /* EditPieceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPieceView.swift; sourceTree = "<group>"; };
+		F29A7D6E2C0F6C2D0053745D /* UnderlineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldView.swift; sourceTree = "<group>"; };
+		F29A7D702C0F785C0053745D /* TitleTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +201,7 @@
 				F29A7D572BFF94270053745D /* Tab */,
 				F29A7D552BFF927A0053745D /* SplashView.swift */,
 				F29A7D5E2BFF9E150053745D /* ContentView.swift */,
+				F29A7D6C2C0F6BF70053745D /* EditPieceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +221,11 @@
 			isa = PBXGroup;
 			children = (
 				F29A7D5B2BFF9AA40053745D /* Text */,
+				F29A7D662C0F54450053745D /* PieceItem.swift */,
+				F29A7D6A2C0F649F0053745D /* AddableItem.swift */,
+				F29A7D682C0F61B20053745D /* PieceItemList.swift */,
+				F29A7D6E2C0F6C2D0053745D /* UnderlineTextFieldView.swift */,
+				F29A7D702C0F785C0053745D /* TitleTextFieldView.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -355,17 +373,23 @@
 				F29A7D562BFF927A0053745D /* SplashView.swift in Sources */,
 				F29A7D5F2BFF9E150053745D /* ContentView.swift in Sources */,
 				F29A7D3A2BE76D800053745D /* TestView.swift in Sources */,
+				F29A7D672C0F54450053745D /* PieceItem.swift in Sources */,
 				F29A7D0D2BE76B130053745D /* NoneContentView.swift in Sources */,
 				F29A7D3C2BE789E30053745D /* TestController.swift in Sources */,
+				F29A7D6B2C0F649F0053745D /* AddableItem.swift in Sources */,
+				F29A7D712C0F785C0053745D /* TitleTextFieldView.swift in Sources */,
 				F29A7D0B2BE76B130053745D /* WebArchiveApp.swift in Sources */,
 				F29A7D532BED37E40053745D /* DataController.swift in Sources */,
 				F29A7D652BFFA36C0053745D /* ProfileView.swift in Sources */,
 				F29A7D3E2BE8C7020053745D /* LinkListView.swift in Sources */,
 				F29A7D462BE8E8FD0053745D /* URLPreviewView.swift in Sources */,
 				F29A7D5D2BFF9ABA0053745D /* TextModifiers.swift in Sources */,
+				F29A7D6F2C0F6C2D0053745D /* UnderlineTextFieldView.swift in Sources */,
+				F29A7D692C0F61B20053745D /* PieceItemList.swift in Sources */,
 				F29A7D632BFFA35B0053745D /* BoxView.swift in Sources */,
 				F29A7D172BE76B180053745D /* WebArchive.xcdatamodeld in Sources */,
 				F29A7D482BE8F89D0053745D /* StringLink.swift in Sources */,
+				F29A7D6D2C0F6BF70053745D /* EditPieceView.swift in Sources */,
 				F29A7D592BFF946F0053745D /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

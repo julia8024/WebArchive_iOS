@@ -81,14 +81,14 @@ struct URLPreviewView: View {
     let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: 4)
     
     let links: [StringLink] = [
-        StringLink(id: UUID(), string: "https://www.apple.com"),
-        StringLink(id: UUID(), string: "https://naver.com"),
-        StringLink(id: UUID(), string: "https://velog.io"),
-        StringLink(id: UUID(), string: "https://github.com"),
-        StringLink(id: UUID(), string: "https://school.programmers.co.kr/learn/challenges/beginner"),
-        StringLink(id: UUID(), string: "http://chat.openai.com/"),
-        StringLink(id: UUID(), string: "https://youtube.com"),
-        StringLink(id: UUID(), string: "https://solved.ac/")
+        StringLink(id: UUID(), url: "https://www.apple.com"),
+        StringLink(id: UUID(), url: "https://naver.com"),
+        StringLink(id: UUID(), url: "https://velog.io"),
+        StringLink(id: UUID(), url: "https://github.com"),
+        StringLink(id: UUID(), url: "https://school.programmers.co.kr/learn/challenges/beginner"),
+        StringLink(id: UUID(), url: "http://chat.openai.com/"),
+        StringLink(id: UUID(), url: "https://youtube.com"),
+        StringLink(id: UUID(), url: "https://solved.ac/")
     ]
     
     @State private var inputTitle: String = ""
