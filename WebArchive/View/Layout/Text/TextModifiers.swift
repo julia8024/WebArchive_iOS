@@ -16,3 +16,22 @@ struct LogoTitle: ViewModifier {
             .foregroundColor(Color.accentColor)
     }
 }
+
+
+struct IconTitle: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 14))
+            .foregroundColor(Color("Text"))
+    }
+}
+
+struct TitleText: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 20))
+            .fontWeight(.semibold)
+            .foregroundColor(Color("Text"))
+    }
+}
