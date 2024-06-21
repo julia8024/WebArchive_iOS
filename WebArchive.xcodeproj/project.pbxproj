@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F24054922C25E1AA00A8C38C /* PreviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24054912C25E1AA00A8C38C /* PreviewModel.swift */; };
+		F24054942C25E84500A8C38C /* FetchURLMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24054932C25E84500A8C38C /* FetchURLMetaData.swift */; };
 		F29A7D0B2BE76B130053745D /* WebArchiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D0A2BE76B130053745D /* WebArchiveApp.swift */; };
 		F29A7D0D2BE76B130053745D /* NoneContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A7D0C2BE76B130053745D /* NoneContentView.swift */; };
 		F29A7D0F2BE76B180053745D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29A7D0E2BE76B180053745D /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		F24054912C25E1AA00A8C38C /* PreviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModel.swift; sourceTree = "<group>"; };
+		F24054932C25E84500A8C38C /* FetchURLMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchURLMetaData.swift; sourceTree = "<group>"; };
 		F29A7D072BE76B130053745D /* WebArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29A7D0A2BE76B130053745D /* WebArchiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebArchiveApp.swift; sourceTree = "<group>"; };
 		F29A7D0C2BE76B130053745D /* NoneContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F24054912C25E1AA00A8C38C /* PreviewModel.swift */,
+				F24054932C25E84500A8C38C /* FetchURLMetaData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				F29A7D142BE76B180053745D /* Persistence.swift in Sources */,
 				F29A7D562BFF927A0053745D /* SplashView.swift in Sources */,
 				F29A7D5F2BFF9E150053745D /* ContentView.swift in Sources */,
+				F24054942C25E84500A8C38C /* FetchURLMetaData.swift in Sources */,
 				F29A7D3A2BE76D800053745D /* TestView.swift in Sources */,
 				F29A7D672C0F54450053745D /* PieceItem.swift in Sources */,
 				F29A7D0D2BE76B130053745D /* NoneContentView.swift in Sources */,

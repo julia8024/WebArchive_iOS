@@ -41,7 +41,7 @@ struct EditPieceView: View {
         NavigationView {
             ScrollView {
                 VStack (spacing: 40) {
-                    TitleTextFieldView(title: "제목", text: $inputTitle, textField: titleView)
+                    TitleTextFieldView(title: "제목", text: $inputTitle, textField: titleView, isOptional: true)
                     TitleTextFieldView(title: "URL", text: $inputURL, textField: urlView)
                     TitleTextFieldView(title: "설명", text: $inputDescription, textField: descriptionView, isOptional: true)
                     // 텍스트 작성
@@ -70,12 +70,18 @@ struct EditPieceView: View {
                 }, label: {
                     Text("취소")
                 }), trailing: Button(action: {
-                    if (inputTitle == "" || inputURL == "") {
+                    if (inputURL == "") {
                         // 필수 항목 중 하나라도 빈칸이 있는 경우
                         textMessage = true
                     } else {
                         // TO DO : 데이터 추가 / 수정
-                        viewModel.addLink(title: inputTitle, url: inputURL, description_url: inputDescription, url_type: "icon", context: manageObjContext)
+                        Task {
+                            let metaData = await fetchURLMetadata(url: URL(string: inputURL))
+                            print("프리뷰 모델: ", metaData.title)
+                            
+                            viewModel.addLink(title: inputTitle != "" ? inputTitle : metaData.title, url: metaData.url, description_url: inputDescription, url_type: "icon", context: manageObjContext)
+                        }
+
                         self.isPresented = false
                     }
                 }, label: {
