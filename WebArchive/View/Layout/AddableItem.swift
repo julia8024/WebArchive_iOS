@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddableItem: View {
-    
     @State private var openAddItemSheet = false
     
     var body: some View {

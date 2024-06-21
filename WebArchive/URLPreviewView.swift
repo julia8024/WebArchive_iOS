@@ -133,14 +133,14 @@ struct URLPreviewView: View {
             .padding(.horizontal, 30)
                 
         
-        Button("링크 추가하기", action: {
-            DataController()
-                .addLink(
-                    title: inputTitle,
-                    url: inputURL,
-                    url_type: selectedSide == .icon ? "icon" : "content",
-                    context: manageObjContext)
-        })
+//        Button("링크 추가하기", action: {
+//            CoreDataViewModel()
+//                .addLink(
+//                    title: inputTitle,
+//                    url: inputURL,
+//                    url_type: selectedSide == .icon ? "icon" : "content",
+//                    context: manageObjContext)
+//        })
             
             // 그리드뷰
             ScrollView {
